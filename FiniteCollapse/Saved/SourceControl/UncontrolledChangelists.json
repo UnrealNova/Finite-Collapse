@@ -1,0 +1,19 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"D:/Repo/Finite-Collapse/FiniteCollapse/Content/Level/Main_Level.umap",
+				"D:/Repo/Finite-Collapse/FiniteCollapse/Content/UI/WBP_EngineerConsole.uasset",
+				"D:/UE_5.7/Engine/Plugins/Marketplace/DarkerNo3e84cab03908V12/Content/Materials/SolidColor.uasset",
+				"D:/UE_5.7/Engine/Plugins/Marketplace/DarkerNo3e84cab03908V12/Content/Materials/Box.uasset",
+				"D:/UE_5.7/Engine/Plugins/Marketplace/DarkerNo3e84cab03908V12/Content/Materials/HeaderBox.uasset",
+				"D:/UE_5.7/Engine/Plugins/Marketplace/DarkerNo3e84cab03908V12/Content/Materials/Panel.uasset",
+				"D:/Repo/Finite-Collapse/FiniteCollapse/Content/Core/BP_FiniteCollapseGameMode.uasset",
+				"D:/Repo/Finite-Collapse/FiniteCollapse/Content/Core/BP_FiniteCollapseGameState.uasset"
+			]
+		}
+	]
+}
