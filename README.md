@@ -1,10 +1,8 @@
 # Finite Collapse
 
-**Finite Collapse** is a systems-driven, decision-based roguelike prototype built in **Unreal Engine 5**.  
-The player assumes the role of a station engineer managing a failing space station governed by a **closed resource system**. There is no victory state—only the challenge of delaying inevitable collapse for as long as possible.
+**Finite Collapse** is a systems-driven roguelike prototype built in **Unreal Engine 5**. The player assumes the role of a station engineer managing a failing space station operating under a closed-resource economy. There is no victory condition — only the challenge of delaying inevitable collapse as long as possible.
 
-This project emphasizes **systems design, mathematical tradeoffs, and UI-driven gameplay**, with no player character, movement, or traditional narrative elements.
-
+This project emphasizes systems architecture, mathematical tradeoffs, and UI-driven gameplay. There are no characters, movement systems, or narrative layers — the station itself is the gameplay system.
 ---
 
 ## Core Concept
@@ -16,41 +14,49 @@ All station resources exist within a fixed total allocation:
 - Cooling  
 - Structural Integrity  
 
-Each operational cycle, the player reallocates these resources and executes the configuration.  
-System drains, cascading failures, and escalating anomalies push the station toward failure.
+Each cycle, the player reallocates resources (total must equal 100%) and executes the configuration.
 
-Every decision trades stability in one system for degradation in another.
+After execution:
 
-**Failure is guaranteed. Survival is measured in time.**
+- System drains resolve
+
+- Threshold penalties trigger
+
+- Anomalies activate
+
+- Cascading failures propagate
+
+Every adjustment strengthens one subsystem while destabilizing another.
+
+Failure is guaranteed. Survival is measured in cycles.
 
 ---
 
 ## Key Design Pillars
 
-- **Closed-System Math**  
-  All resources are conserved. Increasing one value necessarily decreases others.
+**Closed-System Resource Model**  
+All resources are conserved within a fixed budget. Gains in one system necessarily reduce stability elsewhere. The design enforces tradeoff-based decision making.
 
-- **Systems Over Characters**  
-  There are no avatars or NPCs. The station itself is the “character.”
+**Systems Over Characters**  
+The station is the primary gameplay entity. There are no avatars or NPCs. All tension is generated through systemic pressure.
 
-- **Readable Consequences**  
-  Visual emblems represent anomalies, conditions, and system stress instead of text-heavy logs.
+**Readable Consequences**  
+Visual emblems represent anomalies, stress states, and cascading failures, minimizing text and reinforcing UI clarity. 
 
-- **Roguelike Structure**  
-  Endless runs with escalating pressure, randomized anomalies, and run-specific modifiers.
+**Roguelike Pressure Curve** 
+Each run escalates in systemic instability through randomized anomalies and modifier interactions.
 
-- **UI-First Gameplay**  
-  The entire game is played through an engineer console interface.
+**UI-First Gameplay**  
+The entire experience is delivered through a diegetic engineer console interface.
 
 ---
 
-## Gameplay Loop
-
-1. Allocate resources across systems (total must equal 100)
-2. Execute the configuration
-3. System drains and penalties resolve
-4. Anomalies or conditions may trigger
-5. The station degrades
+## **Core Gameplay Loop**
+1. Allocate resources (must total 100%)
+2. Execute configuration
+3. Resolve drains and thresholds
+4. Trigger anomalies and modifiers
+5. Apply cascading system degradation
 6. Repeat until collapse
 
 Score is determined by **cycles survived**.
@@ -59,58 +65,62 @@ Score is determined by **cycles survived**.
 
 ## Features (Current / Planned)
 
-### Implemented
-- Engineer console UI (UMG)
-- Core resource model
-- Cycle execution framework
-- GameState-driven architecture
+### Engineering Focus
+- Modular resource allocation system
+- Threshold-based cascading failure model
+- Emblem-driven anomaly framework
+- Event-based simulation cycle
+- GameState-centered simulation architecture
+- UI decoupled from core logic
 
-### In Progress
-- Threshold-based cascading failures
-- Emblem-based anomaly system
-- Endless run scoring
-- Visual system degradation feedback
+This project intentionally avoids:
+- Character controllers
+- World traversal systems
+- Procedural world generation
+- Narrative systems
 
-### Planned
-- Roguelike upgrade choices
-- Expanded anomaly/emblem pool
-- Audio feedback and polish
-- Optional diagnostic AI (non-directive)
+Scope restraint is a deliberate architectural choice to maintain clarity, determinism, and system integrity.
 
 ---
 
 ## Technical Overview
 
 - **Engine:** Unreal Engine 5
-- **Language:** Blueprints
-- **Architecture:**
-  - `GameState` handles all simulation logic
-  - UI widgets act purely as visualization and input
-  - Modular, data-driven design for anomalies and modifiers
+- **Primary Implementation:** Blueprints (simulation and system logic)
+- **Architecture Approach:**
+  - GameState manages simulation and state transitions
+  - UI widgets serve purely as visualization and input layers
+  - Anomalies and modifiers are data-driven and modular
+  - Cycle resolution operates through deterministic execution phases
 
-The project is intentionally scoped to avoid:
-- Character controllers
-- World traversal
-- Procedural level generation
-- Narrative branching
+The goal is clarity, maintainability, and system scalability.
+
+---
+
+## Architectural Notes
+- Simulation executes in deterministic phases per cycle (allocation → validation → drain resolution → anomaly resolution → degradation).
+- All resource mutations pass through a centralized validation layer to enforce conservation constraints.
+- Anomalies are modular and data-driven, enabling expansion without modifying core simulation logic.
+- UI layer is fully decoupled and does not mutate GameState directly.
+- Architecture supports future migration of simulation logic to C++ without structural refactor.
 
 ---
 
 ## Project Goals
 
 Finite Collapse is designed as:
-- A **portfolio project** demonstrating systems design
-- An exploration of **math-forward gameplay**
-- A contained, finishable prototype with replay value
+- A gameplay system portfolio piece
+- An exploration of math-forward decision mechanics
+- A tightly-scoped, replayable prototype
 
-The focus is clarity, restraint, and mechanical depth—not content volume.
+The emphasis is mechanical depth and architectural clarity — not content volume.
 
 ---
 
 ## Status
 
 🛠 **Active Development**  
-This project is currently in early prototype stage and evolving iteratively.
+Currently iterating on cascading failure logic and anomaly expansion.
 
 ---
 
