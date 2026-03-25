@@ -12,7 +12,9 @@
 				"D:/UE_5.7/Engine/Plugins/Marketplace/DarkerNo3e84cab03908V12/Content/Materials/HeaderBox.uasset",
 				"D:/UE_5.7/Engine/Plugins/Marketplace/DarkerNo3e84cab03908V12/Content/Materials/Panel.uasset",
 				"D:/Repo/Finite-Collapse/FiniteCollapse/Content/Core/BP_FiniteCollapseGameMode.uasset",
-				"D:/Repo/Finite-Collapse/FiniteCollapse/Content/Core/BP_FiniteCollapseGameState.uasset"
+				"D:/Repo/Finite-Collapse/FiniteCollapse/Content/Core/BP_FiniteCollapseGameState.uasset",
+				"D:/Repo/Finite-Collapse/FiniteCollapse/Content/Core/Data/ST_ResourceData.uasset",
+				"D:/Repo/Finite-Collapse/FiniteCollapse/Content/Core/Systems/BP_ResourceManager.uasset"
 			]
 		}
 	]
