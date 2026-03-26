@@ -119,7 +119,7 @@ The emphasis is mechanical depth and architectural clarity — not content volum
 
 ## Status
 
-🛠 **Active Development**  
+**Active Development**  
 Currently iterating on cascading failure logic and anomaly expansion.
 
 ---
